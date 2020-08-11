@@ -1,0 +1,66 @@
+$(document).ready(function(){
+
+    var $arr_cont = [
+        ["img_01.jpg","마이펫 삼총사"],
+        ["img_02.jpg","마이펫 나들이"],
+        ["img_03.jpg","마이펫 휴식"],
+        ["img_04.jpg","마이펫 엔딩스토리"]
+/*         ["img_05.jpg","마이펫 베이비"],
+        ["img_06.jpg","마이펫 히어로 등장"],
+        ["img_07.jpg","마이펫 작은 협상"],
+        ["img_08.jpg","마이펫 변신"] */
+
+    ];
+
+    var $cont = `
+        <div class="box">
+            <div class="img_box"></div>
+            <h4>title</h4>
+        </div>
+    `
+    for(var i=0; i<$arr_cont.length; i++){
+        $("#t_01").append($cont);
+    }
+    $(".box").each(function(index){
+        $(this).find(".img_box").css("background-image","url(img/"+$arr_cont[index][0]+")")
+        $(this).find("h4").text($arr_cont[index][1]);
+
+    });
+
+    /* 02 */
+/*     $("#ex_02 .box .top span").click(function(){
+        $("#ex_02 .box bottom").show();   
+    })
+      */
+
+      /* 03 */
+      var $arr_contt = [
+        ["pop-01.jpg","독일 호수 체험"],
+        ["pop-01.jpg","파리 자유 여행"],
+        ["pop-01.jpg","런던 도심지 여행"],
+        ["pop-01.jpg","그리스 지중해 체험"]
+
+    ];
+
+    var $contt = `
+    <div class="box2">
+        <div class="img_box"></div>
+        <h4>여행지</h4>
+    </div>
+    `
+    for(var i=0; i<$arr_contt.length; i++){
+        $(".cover_03").append($contt);
+    }
+    $(".box2").each(function(index){
+        $(this).find(".img_box").css("background-image","url(img/"+$arr_contt[index][0]+")");
+        $(this).find("h4").text($arr_contt[index][1]);
+
+    });
+
+   
+
+   
+
+
+
+});
